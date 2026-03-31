@@ -72,7 +72,6 @@ Or create a zip of the extension files and rename to `.xpi`.
   - `lists/scams.json`
 - Load bundled lists at runtime by adding fetch calls to `contentScript.js`:
 ```js
-fetch(chrome.runtime.getURL('lists/shorteners.json')).then(r=>r.json()).then(d=>LinkDetector.mergeExternalLists({shorteners:d})).catch(()=>{});
 
 ❤️ Support
 If you like this project, consider supporting:
