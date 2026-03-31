@@ -1,0 +1,24 @@
+.dlp-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(255, 60, 60, 0.06);
+  color: #ff4d4d;
+  font-weight: 500;
+  font-size: 0.95em;
+}
+.dlp-link { color: #b30000; text-decoration: underline; margin: 0 4px; }
+.dlp-badge { margin-right: 4px; }
+.dlp-reason { color: #8a0000; font-size: 0.8em; margin-left: 6px; }
+.dlp-btn {
+  margin-left: 8px;
+  background: transparent;
+  border: 1px solid #8a0000;
+  color: #8a0000;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.85em;
+}
+.dlp-blocked { opacity: 0.5; pointer-events: none; }

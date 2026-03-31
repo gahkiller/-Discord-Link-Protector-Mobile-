@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Discord Link Protector - Mobile",
+  "version": "1.0.0",
+  "description": "Real-time link protection for Discord web client on mobile browsers (Firefox for Android compatible).",
+  "icons": {
+    "48": "discord-link-protector.png",
+    "128": "discord-link-protector.png"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.discord.com/*", "*://discord.com/*"],
+      "js": ["detector.js", "contentScript.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "applications": {
+    "gecko": {
+      "id": "discord-link-protector@example.com"
+    }
+  }
+}
