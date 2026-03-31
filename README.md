@@ -1,4 +1,4 @@
-# 🛡️ Discord Link Protector — Mobile
+- # 🛡️ Discord Link Protector — Mobile
 
 All‑in‑one Discord link protector for mobile 🔒🛡️ — real-time detection & flagging of scams, phishing, token grabbers, IP loggers, shorteners, and unsafe downloads; block/unblock links, on‑device heuristics + updatable blocklists. Firefox for Android compatible 🚀🔍
 
@@ -30,6 +30,14 @@ Requires Firefox for Android — mobile only.
 
 - 🎨 Clean UI  
   Non-intrusive inline warnings (no full-screen overlays). Mobile-friendly controls.
+
+	## ❤️ Support
+- If you like this project, consider supporting:
+- Join my Discord: https://discord.gg/4pnWZhhw4
+- Cash App: $GodkillerYT
+- GitHub Sponsors
+- Ko-fi / Buy Me a Coffee
+- Or share the project to this
 
 ---
 
@@ -72,12 +80,7 @@ Or create a zip of the extension files and rename to `.xpi`.
   - `lists/scams.json`
 - Load bundled lists at runtime by adding fetch calls to `contentScript.js`:
 ```js
+fetch(chrome.runtime.getURL('lists/shorteners.json')).then(r=>r.json()).then(d=>LinkDetector.mergeExternalLists({shorteners:d})).catch(()=>{});
 
-❤️ Support
-If you like this project, consider supporting:
 
-Join my Discord: https://discord.gg/4pnWZhhw4
-Cash App: $GodkillerYT
-GitHub Sponsors
-Ko-fi / Buy Me a Coffee
-Or share the project
+
